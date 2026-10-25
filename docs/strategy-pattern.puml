@@ -1,0 +1,49 @@
+
+@startuml
+
+title Assignment #5 - Strategy Pattern
+title Navigation / Route Planning System
+
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+skinparam linetype ortho
+
+interface RouteStrategy {
+    +planRoute(start: String, end: String): String
+}
+
+class CarStrategy {
+    +planRoute(start: String, end: String): String
+}
+
+class WalkStrategy {
+    +planRoute(start: String, end: String): String
+}
+
+class CycleStrategy {
+    +planRoute(start: String, end: String): String
+}
+
+class Navigator {
+    -strategy: RouteStrategy
+    +Navigator(strategy: RouteStrategy)
+    +setStrategy(strategy: RouteStrategy): void
+    +planRoute(start: String, end: String): String
+}
+
+class Main {
+    +main(args: String[]): void
+}
+
+CarStrategy ..|> RouteStrategy
+WalkStrategy ..|> RouteStrategy
+CycleStrategy ..|> RouteStrategy
+
+Navigator o-- RouteStrategy : holds
+
+Main ..> Navigator : creates / uses
+Main ..> CarStrategy : creates
+Main ..> WalkStrategy : creates
+Main ..> CycleStrategy : creates
+
+@enduml
