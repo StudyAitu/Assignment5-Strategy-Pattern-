@@ -1039,6 +1039,6 @@ Astana IT University
 School of Software Engineering  
 Academic Year: 2026–2027
 
-**GitHub Repository:** [Add your repository URL]
+**GitHub Repository:** https://github.com/StudyAitu/Assignment5-Strategy-Pattern-/edit/main/README.md
 
 **Academic integrity:** This README is a reference draft. The final submission should reflect the student's own implementation, testing, explanations, and any required acknowledgment of external assistance.
